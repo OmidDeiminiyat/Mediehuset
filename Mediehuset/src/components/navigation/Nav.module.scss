@@ -1,0 +1,36 @@
+@import './../../helper/Colors.module.scss';
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./../../assets/fonts/trebuc.ttf') format('ttf'),
+         url('./../../assets/fonts/Trebuchet-MS-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+.myNav {
+    width: 100%;
+    span {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin-left: 10%;
+    img{
+        width: 60%;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            list-style: none;
+            margin: 0 9px 0 9px;
+            font-family: 'MyCustomFont';
+            a{
+                text-decoration: none;
+                color: $dark;
+
+            }
+        }
+    }
+}
+}
