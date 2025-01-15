@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Login } from '../../pages/Login';
-
+import styles from './Header.module.scss';
 export const Header = () => {
 
     const [images, setImages] = useState([]);
@@ -19,14 +18,19 @@ export const Header = () => {
         console.error('Error fetching data:', error);
       }
     };
+
     
     fetchData();
   }, []);
 
     return (
         <>
-        <div>
-            <img src={images[0].image} alt="" />
+        <div className={styles.head}>
+        {loading === true ? (
+        <p>Loading ....!</p>
+      ) : (
+        <img src={images[7].image} alt="" />
+      )}   
         </div>
         
         </>

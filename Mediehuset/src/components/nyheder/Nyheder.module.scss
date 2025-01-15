@@ -1,0 +1,43 @@
+@import './../../helper/Colors.module.scss';
+@import './../../helper/Fonts.module.scss';
+.nyhed{
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    figure{
+        background-color: $backgroundBox;
+        img{
+            width: 100%;
+            max-height: 150px;
+            min-height: 150px;
+        }
+
+        figcaption{
+            width: 90%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            h3{
+                color: $dark;
+                font-size: 16px;
+                font-family: 'Trebuchet MS';
+             }
+            p{
+                font-size: 14px;
+                font-family: 'Trebuchet MS';
+                font-weight: 100;
+            }
+            button{
+                width: 100%;
+                background-color: $button-background;
+                color: $light;
+                padding: 6px 0 6px 0;
+                font-family: 'Trebuchet MS';
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

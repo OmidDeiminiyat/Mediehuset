@@ -6,6 +6,8 @@ import { Login } from "./pages/Login";
 import { Camps } from "./pages/Camps";
 import { Billet } from "./pages/Billeleter";
 import { Praktisk } from "./pages/Praktisk";
+import DetailsPage from "./pages/Details";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
 
@@ -20,8 +22,10 @@ function App() {
           <Route path="/pages/Billeleter" element={<Billet />} />
           <Route path="/pages/praktisk" element={<Praktisk />} />
           <Route path="/pages/Login" element={<Login />} />
+          <Route path="/pages/Details/:id" element={<DetailsPage />} />
           {/* <Route path="*" element={<Errorpage />} /> */}
         </Routes>
+        < Footer />
     </Router>
      
     </>
