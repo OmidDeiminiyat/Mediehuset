@@ -3,11 +3,14 @@
 .nyhed{
     width: 80%;
     margin-left: 10%;
+    margin-bottom: 18px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     figure{
         background-color: $backgroundBox;
+        margin: 0;
+        padding: 0;
         img{
             width: 100%;
             max-height: 150px;
@@ -36,6 +39,7 @@
                 padding: 6px 0 6px 0;
                 font-family: 'Trebuchet MS';
                 cursor: pointer;
+                margin-bottom: 9px;
             }
         }
     }
