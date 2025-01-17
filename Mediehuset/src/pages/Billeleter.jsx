@@ -1,4 +1,5 @@
 import { BilletLists } from "../components/billetList/BilletList"
+import { UserTicketForm } from "../components/biletUserForm/BiletUserForm";
 import { BuyTickets } from "../components/buyTicket/BuyTickets"
 import { Header } from "../components/header/Header"
 import React, { useState } from "react";
@@ -17,6 +18,7 @@ export const Billet = () => {
         < Header />
         < BilletLists onAction={handleTable1Action} />
         < BuyTickets isVisible={isTable2Visible}  />
+        < UserTicketForm isVisible={isTable2Visible} />
         </>
     )
 }

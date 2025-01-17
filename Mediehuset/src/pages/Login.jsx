@@ -1,10 +1,14 @@
+import { Header } from "../components/header/Header"
+import { LoginComp } from "../components/login/LoginCom"
 
+ 
 export const Login = () => {
 
     return (
 
         <>
-        <h1>Login</h1>
+        < Header />
+        < LoginComp />
         </>
     )
 }

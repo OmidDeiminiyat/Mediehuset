@@ -1,12 +1,11 @@
 import React, {useState, useEffect } from 'react';
 import tableStyle from './BilletList.module.scss';
-import { useNavigate } from "react-router-dom";
 
 
 export const BilletLists = ({ onAction }) => {
     const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+
 
 
   useEffect(() => {
@@ -35,32 +34,22 @@ function handleBuyTicket(itemId) {
     storedItems.push(itemId);
     localStorage.setItem('items', JSON.stringify(storedItems));
     console.log("Added item:", itemId);
-    myFunction()
+    
+    document.getElementById('ticketList').style.display = 'none';
+    document.getElementById('secondlist').style.display = 'none';
+    onAction();
     // Check if the item already exists
    
     console.log("Current items in local storage:", JSON.parse(localStorage.getItem('items')));
 }
 window.addEventListener('load', () => {
-    const storedItems = JSON.parse(localStorage.getItem('items'));
+    const storedItems = JSON.parse(localStorage.getItem('items'));    
     if (storedItems) {
         console.log("Items on load:", storedItems);
     } else {
         console.log("No items in local storage yet.");
     }
 });
-
-// alert if item added 
-function myFunction() {
-    alert('New item added');
-  }
-
-
-  const handleButtonClick = () => {
-   document.getElementById('ticketList').style.display = 'none';
-   document.getElementById('secondlist').style.display = 'none';
-   onAction();
-};
-
 
     return (
 
@@ -98,7 +87,6 @@ function myFunction() {
                 ))}
             </tbody>
             </table>
-            <button onClick={() => handleButtonClick()} className={tableStyle.enkeltBut}>Fortsætte.</button>
         </section>
         
         </>
